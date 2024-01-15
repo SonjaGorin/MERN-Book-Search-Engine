@@ -8,8 +8,7 @@ const typeDefs = `
     }
 
     type Book {
-        // Check the bookId type
-        bookId: ID!
+        bookId: String!
         authors: [String]
         description: String
         title: String!
