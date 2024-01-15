@@ -11,7 +11,7 @@ const resolvers = {
             if (context.user) {
                 return User
                     .findOne({ _id: context.user._id })
-                    .populate("books")
+                    .populate("savedBooks")
                     .select(-__v -password);
             }
             throw AuthenticationError;
@@ -53,7 +53,7 @@ const resolvers = {
                             runValidators: true,
                         },
                     )
-                    .populate("books");
+                    .populate("savedBooks");
                 return updateUser;
             };
             throw AuthenticationError;
