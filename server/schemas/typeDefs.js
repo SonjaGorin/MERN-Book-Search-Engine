@@ -32,6 +32,8 @@ const typeDefs = `
 
     type Query {
         me: User
+        users: [User]
+        singleUser(userId: ID!): User
     }
 
     type Mutation {
