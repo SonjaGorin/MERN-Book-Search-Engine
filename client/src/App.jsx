@@ -29,6 +29,7 @@ const client = new ApolloClient({
 
 function App() {
   return (
+    // Wraping component tree with the ApolloProvider component to enable access to the ApolloClient from anywhere within the application
     <ApolloProvider client={client}>
       <>
         <Navbar />
