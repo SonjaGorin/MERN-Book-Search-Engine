@@ -55,7 +55,6 @@ const resolvers = {
         // saving book to user's list
         saveBook: async (parent, book, context) => {
             if (context.user) {
-                console.log(book)
                 const updateUser = await User.findOneAndUpdate(
                         { _id: context.user._id }, 
                         { $addToSet: { savedBooks: book } },
